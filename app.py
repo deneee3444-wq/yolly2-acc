@@ -81,7 +81,7 @@ HEADERS = {
     ),
 }
 
-DEFAULT_DOMAIN = "cmail.asia"
+DEFAULT_DOMAIN = "tempmailt.com"
 
 POLL_COMPONENTS = [
     "frontend.components.action",
@@ -994,7 +994,7 @@ def worker_loop():
 
         # Otomatik Mod: 1 Dakika (60 saniye) bekleme
         add_log("[Oto Mod] Yeni hesap için 1 dakika (60 sn) geri sayım başladı...", level="INFO")
-        for remaining in range(60, 0, -1):
+        for remaining in range(1, 0, -1):
             with state_lock:
                 if not app_state["is_running"]:
                     break
