@@ -349,7 +349,7 @@ class TempMailClient:
             "x-csrf-token": self.csrf,
         }
 
-        self.box = generate_random_username(length)
+        self.box = random.choice(string.ascii_lowercase) + generate_random_username(length - 1)
         target_email = f"{self.box}@{self.domain}"
 
         check_mail_comp = self.components.get("frontend.components.check-mail")
